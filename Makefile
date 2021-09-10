@@ -8,3 +8,7 @@ migrations:
 
 migrate:
 	pipenv run python3 manage.py migrate
+
+
+superuser:
+	pipenv run python3 manage.py createsuperuser
