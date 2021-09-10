@@ -1,3 +1,26 @@
 from django.db import models
 
-# Create your models here.
+
+class Animal(models.Model):
+    """Класс описывает объект Животное"""
+
+    name = models.CharField(max_length=30, verbose_name="Кличка")
+    age = models.PositiveIntegerField(verbose_name="Возраст")
+    breed = models.CharField(max_length=30, verbose_name="Порода")
+    species = models.CharField(max_length=30, verbose_name="Вид животного")
+
+
+class Vaccination(models.Model):
+    """Класс описывающий объект Вакцинация"""
+
+    date = models.DateField(verbose_name="Дата прививки")
+    vaccine = models.CharField(max_length=50, verbose_name="Вакцина")
+
+
+class AntiParasiteTreatment(models.Model):
+    """Класс описывающий объект Обратока от паразитов"""
+
+    parasite_species = models.CharField(max_length=30, verbose_name="Вид паразитов")
+    date = models.DateField(verbose_name="Дата обработки")
+    medication = models.CharField(max_length=50, verbose_name="Препарат")
+    dosage = models.CharField(max_length=10, verbose_name="Дозировка")
