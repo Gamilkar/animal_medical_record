@@ -1,0 +1,9 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+{% if animals_list %}
+{% for animal in animals_list %}
+<a href="{{ animal.name }}">{{ animal.name }}</a> <br>
+{% endfor %}
+{% endif %}
+{% endblock %}
