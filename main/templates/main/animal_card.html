@@ -1,5 +1,12 @@
 {% extends 'main/base.html' %}
 
 {% block content %}
-name: {{ name }}
+name: {{ animal.name }} <br>
+birth: {{ animal.birth }} <br>
+breed: {{ animal.breed }} <br>
+<br>
+<a href="vaccinations">Показать список вакцинаций</a> <br>
+<a href="treatments">Показать список обработок от паразитов</a> <br>
+<a href="add_vaccination">Добавить вакцинацию</a> <br>
+<a href="add_treatment">Добавить обработку от паразитов</a> <br>
 {% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+
+{% if treatments %}
+<ul>
+    {% for treatment in treatments %}
+    <li> date: {{ treatment.date }};
+        parasite_type: {{ treatment.parasite_type }};
+        medication: {{ treatment.medication }};
+        dosage: {{ treatment.dosage }};
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+<a href="add_treatment">Добавить обработку от паразитов</a> <br>
+
+
+{% endblock %}
