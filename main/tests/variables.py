@@ -1,0 +1,316 @@
+from random import choice, randint
+
+vaccine_list = [
+    "Биовак-D",
+    "Мультикан-1",
+    "Биовак-P",
+    "Нобивак Parvo-C",
+    "Нобивак Rabies",
+    "Рабизин",
+    "Рабикан",
+    "Нобивак Lepto",
+    "Биовак-L",
+    "Нобивак Piro",
+]
+
+medication_list = [
+    "Азитронит",
+    "Альвет",
+    "Альвет-суспензия",
+    "Амоксигард",
+    "Амоксициллин 150",
+    "Бутофан",
+    "Бутофан OR",
+    "ГАН",
+]
+
+users_list = [
+    {"name": "tata", "password": "tata", "email": "tata@mail.com"},
+    {"name": "test", "password": "test", "email": "test@mail.com"},
+    {"name": "admin", "password": "admin", "email": "admin@mail.com"},
+]
+
+animals_list = [
+    {
+        "owner": "tata",  #!!! обрати внимание на Юзера!!!
+        "species": "Собака",
+        "name": "Рикки",
+        "birth": "2018-01-01",
+        "breed": "Спаниэль",
+        "gender": "Мужской",
+    },
+    {
+        "owner": "tata",
+        "species": "Кошка",
+        "name": "Муся",
+        "birth": "2010-05-20",
+        "breed": "Дворняжка",
+        "gender": "Женский",
+    },
+    {
+        "owner": "tata",
+        "species": "Хомяк",
+        "name": "Хома",
+        "birth": "2020-06-05",
+        "breed": "-",
+        "gender": "Мужской",
+    },
+    {
+        "owner": "tata",
+        "species": "Кот",
+        "name": "Пушок",
+        "birth": "2014-02-09",
+        "breed": "Британец",
+        "gender": "Мужской",
+    },
+    {
+        "owner": "tata",
+        "species": "Собака",
+        "name": "Соня",
+        "birth": "2015-01-17",
+        "breed": "Спаниэль",
+        "gender": "Женский",
+    },
+    {
+        "owner": "tata",
+        "species": "Лиса",
+        "name": "Алиса",
+        "birth": "2018-03-04",
+        "breed": "-",
+        "gender": "Женский",
+    },
+]
+
+vaccination_list = [
+    {
+        "animal": choice(animals_list)["name"],
+        "date": f"{randint(2000, 2020)}-{randint(1, 12)}-{randint(1, 28)}",
+        "vaccine": choice(vaccine_list),
+    },
+    {
+        "animal": choice(animals_list)["name"],
+        "date": f"{randint(2000, 2020)}-{randint(1, 12)}-{randint(1, 28)}",
+        "vaccine": choice(vaccine_list),
+    },
+    {
+        "animal": choice(animals_list)["name"],
+        "date": f"{randint(2000, 2020)}-{randint(1, 12)}-{randint(1, 28)}",
+        "vaccine": choice(vaccine_list),
+    },
+    {
+        "animal": choice(animals_list)["name"],
+        "date": f"{randint(2000, 2020)}-{randint(1, 12)}-{randint(1, 28)}",
+        "vaccine": choice(vaccine_list),
+    },
+    {
+        "animal": choice(animals_list)["name"],
+        "date": f"{randint(2000, 2020)}-{randint(1, 12)}-{randint(1, 28)}",
+        "vaccine": choice(vaccine_list),
+    },
+    {
+        "animal": choice(animals_list)["name"],
+        "date": f"{randint(2000, 2020)}-{randint(1, 12)}-{randint(1, 28)}",
+        "vaccine": choice(vaccine_list),
+    },
+    {
+        "animal": choice(animals_list)["name"],
+        "date": f"{randint(2000, 2020)}-{randint(1, 12)}-{randint(1, 28)}",
+        "vaccine": choice(vaccine_list),
+    },
+    {
+        "animal": choice(animals_list)["name"],
+        "date": f"{randint(2000, 2020)}-{randint(1, 12)}-{randint(1, 28)}",
+        "vaccine": choice(vaccine_list),
+    },
+    {
+        "animal": choice(animals_list)["name"],
+        "date": f"{randint(2000, 2020)}-{randint(1, 12)}-{randint(1, 28)}",
+        "vaccine": choice(vaccine_list),
+    },
+    {
+        "animal": choice(animals_list)["name"],
+        "date": f"{randint(2000, 2020)}-{randint(1, 12)}-{randint(1, 28)}",
+        "vaccine": choice(vaccine_list),
+    },
+    {
+        "animal": choice(animals_list)["name"],
+        "date": f"{randint(2000, 2020)}-{randint(1, 12)}-{randint(1, 28)}",
+        "vaccine": choice(vaccine_list),
+    },
+    {
+        "animal": choice(animals_list)["name"],
+        "date": f"{randint(2000, 2020)}-{randint(1, 12)}-{randint(1, 28)}",
+        "vaccine": choice(vaccine_list),
+    },
+]
+
+treatments_list = [
+    {
+        "animal": choice(animals_list)["name"],
+        "parasite_type": choice(["Гельминты", "Клещи"]),
+        "date": f"{randint(2000, 2020)}-{randint(1, 12)}-{randint(1, 28)}",
+        "medication": choice(medication_list),
+        "dosage": "По весу",
+    },
+    {
+        "animal": choice(animals_list)["name"],
+        "parasite_type": choice(["Гельминты", "Клещи"]),
+        "date": f"{randint(2000, 2020)}-{randint(1, 12)}-{randint(1, 28)}",
+        "medication": choice(medication_list),
+        "dosage": "По весу",
+    },
+    {
+        "animal": choice(animals_list)["name"],
+        "parasite_type": choice(["Гельминты", "Клещи"]),
+        "date": f"{randint(2000, 2020)}-{randint(1, 12)}-{randint(1, 28)}",
+        "medication": choice(medication_list),
+        "dosage": "По весу",
+    },
+    {
+        "animal": choice(animals_list)["name"],
+        "parasite_type": choice(["Гельминты", "Клещи"]),
+        "date": f"{randint(2000, 2020)}-{randint(1, 12)}-{randint(1, 28)}",
+        "medication": choice(medication_list),
+        "dosage": "По весу",
+    },
+    {
+        "animal": choice(animals_list)["name"],
+        "parasite_type": choice(["Гельминты", "Клещи"]),
+        "date": f"{randint(2000, 2020)}-{randint(1, 12)}-{randint(1, 28)}",
+        "medication": choice(medication_list),
+        "dosage": "По весу",
+    },
+    {
+        "animal": choice(animals_list)["name"],
+        "parasite_type": choice(["Гельминты", "Клещи"]),
+        "date": f"{randint(2000, 2020)}-{randint(1, 12)}-{randint(1, 28)}",
+        "medication": choice(medication_list),
+        "dosage": "По весу",
+    },
+    {
+        "animal": choice(animals_list)["name"],
+        "parasite_type": choice(["Гельминты", "Клещи"]),
+        "date": f"{randint(2000, 2020)}-{randint(1, 12)}-{randint(1, 28)}",
+        "medication": choice(medication_list),
+        "dosage": "По весу",
+    },
+    {
+        "animal": choice(animals_list)["name"],
+        "parasite_type": choice(["Гельминты", "Клещи"]),
+        "date": f"{randint(2000, 2020)}-{randint(1, 12)}-{randint(1, 28)}",
+        "medication": choice(medication_list),
+        "dosage": "По весу",
+    },
+    {
+        "animal": choice(animals_list)["name"],
+        "parasite_type": choice(["Гельминты", "Клещи"]),
+        "date": f"{randint(2000, 2020)}-{randint(1, 12)}-{randint(1, 28)}",
+        "medication": choice(medication_list),
+        "dosage": "По весу",
+    },
+    {
+        "animal": choice(animals_list)["name"],
+        "parasite_type": choice(["Гельминты", "Клещи"]),
+        "date": f"{randint(2000, 2020)}-{randint(1, 12)}-{randint(1, 28)}",
+        "medication": choice(medication_list),
+        "dosage": "По весу",
+    },
+    {
+        "animal": choice(animals_list)["name"],
+        "parasite_type": choice(["Гельминты", "Клещи"]),
+        "date": f"{randint(2000, 2020)}-{randint(1, 12)}-{randint(1, 28)}",
+        "medication": choice(medication_list),
+        "dosage": "По весу",
+    },
+    {
+        "animal": choice(animals_list)["name"],
+        "parasite_type": choice(["Гельминты", "Клещи"]),
+        "date": f"{randint(2000, 2020)}-{randint(1, 12)}-{randint(1, 28)}",
+        "medication": choice(medication_list),
+        "dosage": "По весу",
+    },
+    {
+        "animal": choice(animals_list)["name"],
+        "parasite_type": choice(["Гельминты", "Клещи"]),
+        "date": f"{randint(2000, 2020)}-{randint(1, 12)}-{randint(1, 28)}",
+        "medication": choice(medication_list),
+        "dosage": "По весу",
+    },
+    {
+        "animal": choice(animals_list)["name"],
+        "parasite_type": choice(["Гельминты", "Клещи"]),
+        "date": f"{randint(2000, 2020)}-{randint(1, 12)}-{randint(1, 28)}",
+        "medication": choice(medication_list),
+        "dosage": "По весу",
+    },
+    {
+        "animal": choice(animals_list)["name"],
+        "parasite_type": choice(["Гельминты", "Клещи"]),
+        "date": f"{randint(2000, 2020)}-{randint(1, 12)}-{randint(1, 28)}",
+        "medication": choice(medication_list),
+        "dosage": "По весу",
+    },
+    {
+        "animal": choice(animals_list)["name"],
+        "parasite_type": choice(["Гельминты", "Клещи"]),
+        "date": f"{randint(2000, 2020)}-{randint(1, 12)}-{randint(1, 28)}",
+        "medication": choice(medication_list),
+        "dosage": "По весу",
+    },
+    {
+        "animal": choice(animals_list)["name"],
+        "parasite_type": choice(["Гельминты", "Клещи"]),
+        "date": f"{randint(2000, 2020)}-{randint(1, 12)}-{randint(1, 28)}",
+        "medication": choice(medication_list),
+        "dosage": "По весу",
+    },
+    {
+        "animal": choice(animals_list)["name"],
+        "parasite_type": choice(["Гельминты", "Клещи"]),
+        "date": f"{randint(2000, 2020)}-{randint(1, 12)}-{randint(1, 28)}",
+        "medication": choice(medication_list),
+        "dosage": "По весу",
+    },
+    {
+        "animal": choice(animals_list)["name"],
+        "parasite_type": choice(["Гельминты", "Клещи"]),
+        "date": f"{randint(2000, 2020)}-{randint(1, 12)}-{randint(1, 28)}",
+        "medication": choice(medication_list),
+        "dosage": "По весу",
+    },
+    {
+        "animal": choice(animals_list)["name"],
+        "parasite_type": choice(["Гельминты", "Клещи"]),
+        "date": f"{randint(2000, 2020)}-{randint(1, 12)}-{randint(1, 28)}",
+        "medication": choice(medication_list),
+        "dosage": "По весу",
+    },
+    {
+        "animal": choice(animals_list)["name"],
+        "parasite_type": choice(["Гельминты", "Клещи"]),
+        "date": f"{randint(2000, 2020)}-{randint(1, 12)}-{randint(1, 28)}",
+        "medication": choice(medication_list),
+        "dosage": "По весу",
+    },
+    {
+        "animal": choice(animals_list)["name"],
+        "parasite_type": choice(["Гельминты", "Клещи"]),
+        "date": f"{randint(2000, 2020)}-{randint(1, 12)}-{randint(1, 28)}",
+        "medication": choice(medication_list),
+        "dosage": "По весу",
+    },
+    {
+        "animal": choice(animals_list)["name"],
+        "parasite_type": choice(["Гельминты", "Клещи"]),
+        "date": f"{randint(2000, 2020)}-{randint(1, 12)}-{randint(1, 28)}",
+        "medication": choice(medication_list),
+        "dosage": "По весу",
+    },
+    {
+        "animal": choice(animals_list)["name"],
+        "parasite_type": choice(["Гельминты", "Клещи"]),
+        "date": f"{randint(2000, 2020)}-{randint(1, 12)}-{randint(1, 28)}",
+        "medication": choice(medication_list),
+        "dosage": "По весу",
+    },
+]
