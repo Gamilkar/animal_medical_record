@@ -1,5 +1,9 @@
 {% extends 'main/base.html' %}
 
 {% block content %}
-форма добавления обработки
+<form actions="add_treatment" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit"> Сохранить </button>
+</form>
 {% endblock %}

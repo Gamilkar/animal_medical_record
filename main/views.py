@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
-from django.shortcuts import render
-from main import models
+from django.shortcuts import render, get_object_or_404
+from main import models, forms
 
 
 def index(request):
@@ -38,24 +38,48 @@ def treatments(request, pk):
 
 
 def add_vaccination(request, pk):
-
-    context = {
-        "status": "ok",
-    }
-    return render(request, "main/add_vaccination.html", context)
+    if request.method == "POST":
+        form = forms.VaccinationForm(request.POST)
+        if form.is_valid:
+            form.save()
+    else:
+        form = forms.VaccinationForm()
+    return render(
+        request,
+        "main/add_vaccination.html",
+        {
+            "form": form,
+        },
+    )
 
 
 def add_treatment(request, pk):
-
-    context = {
-        "status": "ok",
-    }
-    return render(request, "main/add_treatment.html", context)
+    if request.method == "POST":
+        form = forms.TreatmentForm(request.POST)
+        if form.is_valid:
+            form.save()
+    else:
+        form = forms.TreatmentForm()
+    return render(
+        request,
+        "main/add_treatment.html",
+        {
+            "form": form,
+        },
+    )
 
 
 def add_animal(request):
-
-    context = {
-        "status": "ok",
-    }
-    return render(request, "main/add_animal.html", context)
+    if request.method == "POST":
+        form = forms.AnimalForm(request.POST)
+        if form.is_valid:
+            form.save()
+    else:
+        form = forms.AnimalForm()
+    return render(
+        request,
+        "main/add_animal.html",
+        {
+            "form": form,
+        },
+    )

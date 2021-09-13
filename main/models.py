@@ -8,7 +8,7 @@ class Animal(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name="Владелец")
     species = models.CharField(max_length=30, verbose_name="Вид животного")
     name = models.CharField(max_length=30, verbose_name="Кличка")
-    birth = models.DateField(verbose_name="Возраст")
+    birth = models.DateField(verbose_name="Дата рождения")
     breed = models.CharField(max_length=30, verbose_name="Порода")
     gender = models.CharField(
         max_length=10, choices=[("Ж", "Женский"), ("М", "Мужской")], verbose_name="Пол"

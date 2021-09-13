@@ -1,5 +1,11 @@
 {% extends 'main/base.html' %}
 
 {% block content %}
-форма добавления животного
+
+<form actions="add_animal" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit"> Сохранить </button>
+</form>
+
 {% endblock %}
