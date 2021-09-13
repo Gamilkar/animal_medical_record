@@ -12,3 +12,7 @@ migrate:
 
 superuser:
 	pipenv run python3 manage.py createsuperuser
+
+
+api:
+	pipenv run python manage.py shell
