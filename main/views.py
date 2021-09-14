@@ -83,3 +83,17 @@ def add_animal(request):
             "form": form,
         },
     )
+
+
+def login(request):
+    if request.method == "POST":
+        form = forms.LoginForm(request.POST)
+    else:
+        form = forms.LoginForm()
+    return render(
+        request,
+        "main/login.html",
+        {
+            "form": form,
+        },
+    )
