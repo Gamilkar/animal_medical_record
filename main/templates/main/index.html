@@ -1,11 +1,33 @@
 {% extends 'main/base.html' %}
+{% load static %}
 
 {% block content %}
-{% if animals_list %}
-{% for animal in animals_list %}
-<a href="{{ animal.id }}">{{ animal.name }}</a> <br>
-{% endfor %}
-{% endif %}
-<br><a href="add_animal">Добавить животное</a> <br>
+
+<div class="row row-cols-1 row-cols-md-4 g-4">
+    {% if animals_list %}
+    {% for animal in animals_list %}
+
+    <div class="col">
+        <div class="card">
+            <img src="https://i.pinimg.com/564x/92/56/48/9256487de664901ebfedcd829cdbed76.jpg" class="card-img-top"
+                alt="...">
+            <div class="card-body">
+                <h5 class="card-title"><a href="{{ animal.id }}">{{ animal.name }}</a></h5>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+    <div class="col">
+        <div class="card">
+            <img src="https://i.pinimg.com/564x/92/56/48/9256487de664901ebfedcd829cdbed76.jpg" class="card-img-top"
+                alt="...">
+            <div class="card-body">
+                <h5 class="card-title"><a href="add_animal">Добавить животное</a></h5>
+            </div>
+        </div>
+    </div>
+
+</div>
 
 {% endblock %}
