@@ -1,7 +1,11 @@
 {% extends 'main/base.html' %}
 {% load static %}
+{% load socialaccount %}
+
 
 {% block content %}
+
+{% if user.is_authenticated %}
 <h1>Ваши животные:</h1> <br>
 <div class="row row-cols-1 row-cols-md-4 g-4">
     {% if animals_list %}
@@ -29,5 +33,9 @@
     </div>
 
 </div>
+
+{% else %}
+<a href="{% provider_login_url 'google' %}">Login With Google</a>
+{% endif %}
 
 {% endblock %}
