@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<form actions="add_animal" method="POST">
+<form class="form-control" actions="add_animal" method="POST">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit"> Сохранить </button>

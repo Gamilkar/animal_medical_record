@@ -1,15 +1,13 @@
 {% extends 'main/base.html' %}
 
 {% block content %}
-
 {% if treatments %}
-<ul>
+<ul class="list-group-flush list-group-numbered">
     {% for treatment in treatments %}
-    <li> date: {{ treatment.date }};
+    <li class="list-group-item">date: {{ treatment.date }};
         parasite_type: {{ treatment.parasite_type }};
         medication: {{ treatment.medication }};
-        dosage: {{ treatment.dosage }};
-    </li>
+        dosage: {{ treatment.dosage }};</li>
     {% endfor %}
 </ul>
 {% endif %}
